@@ -1,0 +1,24 @@
+body {
+    font-family: 'Cabin', sans-serif;
+    background: url('') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.brand {
+	font-family: 'Belleza', sans-serif;
+	color: #000;
+	text-shadow: none;
+}
+
+.address-bar {
+	color: #000;
+	text-shadow: none;
+}
+
+.navbar a {
+	font-family: 'Cabin', sans-serif;
+	text-transform: lowercase;
+}
