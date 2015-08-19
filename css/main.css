@@ -1,3 +1,7 @@
+/**************************
+********* GENERAL *********
+**************************/
+
 body {
     font-family: 'Cabin', sans-serif;
     background: url('') no-repeat center center fixed;
@@ -5,6 +9,38 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+p {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.bottom-text {
+	margin-top: 45px;
+}
+
+hr {
+	max-width: 600px;
+}
+
+#countdown h1 {
+	margin: auto auto;
+}
+
+/**************************
+********* HEADER **********
+**************************/
+
+h1, h2, h3 {
+	font-family: 'Belleza', sans-serif;
+	text-transform: none;
+}
+
+.intro-text {
+	font-size: 22px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .brand {
@@ -18,7 +54,56 @@ body {
 	text-shadow: none;
 }
 
+/**************************
+******* NAVIGATION ********
+**************************/
+
 .navbar a {
 	font-family: 'Cabin', sans-serif;
 	text-transform: lowercase;
 }
+
+.navbar-default {
+	background: rgba(251, 208, 208, 0.4);
+}
+
+.directions-text p {
+	text-align: left;
+}
+
+.circle {
+	border-radius: 12px 6px 12px 6px;
+	background: grey;
+	padding: 5px;
+	line-height: 3px;
+}
+
+.nav li a {
+	padding: 11px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 15px;
+}
+
+/**************************
+********* IMAGES **********
+**************************/
+
+.logo {
+	margin: 0 auto;
+	max-width: 300px;
+}
+
+.registry-contain {
+	margin-top: 50px;
+}
+
+/**************************
+********* FOOTER **********
+**************************/
+footer p {
+	font-size: 10px;
+}
+
+
+
