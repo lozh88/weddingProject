@@ -34,9 +34,6 @@
 
 <body>
 
-    <div class="brand">Kitson Wedding</div>
-    <div class="address-bar">All Saints Church | Bookham</div>
-
     <!-- Navigation -->
     <nav class="navbar navbar-default nav-des" role="navigation">
         <div class="container">
@@ -73,6 +70,9 @@
         <!-- /.container -->
     </nav>
 
+    <div class="brand">Kitson Wedding</div>
+    <div class="address-bar">All Saints Church | Bookham | 31 July 2016</div>
+
     <div class="container">
 
         <div class="row">
@@ -89,13 +89,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="img-responsive img-full" src="img/slide-1.jpg" alt="">
+                                <img class="img-responsive img-full" src="img/coupleEdit-4.jpg" alt=""></img>
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slide-2.jpg" alt="">
+                                <img class="img-responsive img-full" src="img/coupleEdit-3.jpg" alt=""></img>
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slide-3.jpg" alt="">
+                                <img class="img-responsive img-full" src="img/coupleEdit-5.jpg" alt="">
                             </div>
                         </div>
 
@@ -113,31 +113,19 @@
 
         <div class="row">
             <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Build a website
-                        <strong>worth visiting</strong>
-                    </h2>
-                    <hr>
-                    <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
-                    <hr class="visible-xs">
-                    <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
-                    <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <div class="col-lg-12">         
+					<h1>
+						<span id="countdown"></span>
+					</h1>
+					<p>until the big day</p>
+                    <!-- <p>After 4 free pints, an untold amount of strolls down Clapham High Street, <em>three</em> weeks of non-stop talking, a David, a Jamie, an unforgettable date at the Windsor, 324 homecooked  dinners, one last epic year of civil engineering, 504 hours travelling 120 miles a day between Essex and Surrey, a 2-day Christmas bonanza with both families, 1 unicorn, 2 cats, one big 'I Love You' a week in the Pyrenees, 7 bunches of flowers, an ever growing book collection, 2 kindles and a 1961 record player, 3 bicycles, lots of purple paint, wonderfully warm central heating, 4 boxes of noodles, three, that's right three, sewing machines, 2 Spotifys, 1 Netflix, copious Amazon parcels, fitted around 12,480 miles commuting to and from work 2-hours a day sandwiched between endless  village people problems.</p> -->                   
                 </div>
             </div>
         </div>
-
+		
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Beautiful boxes
-                        <strong>to showcase your content</strong>
-                    </h2>
-                    <hr>
-                    <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                 </div>
             </div>
         </div>
@@ -166,6 +154,47 @@
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
+    </script>
+
+    <script type="text/javascript">
+    var clock = $('.clock').FlipClock(3600 * 24 * 3, {
+        clockFace: 'DailyCounter',
+        countdown: true,
+        showSeconds: false
+    });
+    </script>
+
+    <script type="text/javascript">
+    // set the date we're counting down to
+    var target_date = new Date("Jul 31, 2016").getTime();
+ 
+    // variables for time units
+    var days, hours, minutes, seconds;
+     
+    // get tag element
+    var countdown = document.getElementById("countdown");
+     
+    // update the tag with id "countdown" every 1 second
+    setInterval(function () {
+     
+    // find the amount of "seconds" between now and target
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
+ 
+    // do some time calculations
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+     
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+     
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
+     
+    // format countdown string + set tag value
+    countdown.innerHTML = days ;  
+     
+    }, 1000);
     </script>
 
 </body>
