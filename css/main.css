@@ -11,9 +11,11 @@ body {
     -o-background-size: cover;
 }
 
-p {
+.white-space p {
 	text-align: center;
 	padding-bottom: 20px;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .bottom-text {
@@ -24,8 +26,20 @@ hr {
 	max-width: 600px;
 }
 
-#countdown h1 {
-	margin: auto auto;
+.countdown-area h1 {
+	text-align: center;
+	font-size: 60px;
+	z-index: 1;
+}
+
+.countdown-area p {
+	text-align: center;
+	font-size: 40px;
+	z-index: 1;
+}
+
+.directions-text p {
+	margin-bottom: 10px;
 }
 
 /**************************
@@ -92,10 +106,60 @@ h1, h2, h3 {
 .logo {
 	margin: 0 auto;
 	max-width: 300px;
+	padding: 20px;
 }
 
 .registry-contain {
 	margin-top: 50px;
+}
+
+.contact-background {
+	background-color: rgba(251, 208, 208, 0.4)
+}
+
+placeholder {
+	font-size: 15px;
+}
+
+.heart {
+	max-width: 250px;
+	position: absolute;
+	z-index: -1;
+	top: -27px;
+	left: 65px;
+}
+
+/**************************
+********* FOOTER **********
+**************************/
+
+p > label {
+	display: block;
+}
+
+input[type=text],
+input[type=email],
+textarea
+{
+	-webkit-appearance: none;
+  
+	  width : 100%;
+	  border: 1px solid #333;
+	  margin: 0;
+	  
+	  font-family: inherit;
+	  font-size: 90%;
+	  
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+}
+
+input:invalid {
+	background-color: rgba(251, 208, 208, 0.4);
+}
+
+input:focus:invalid {
+	outline: none;
 }
 
 /**************************
