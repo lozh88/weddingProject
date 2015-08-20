@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Andy and Lauren | Wedding</title>
+    <title>David and Kelly | Wedding</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,9 +33,6 @@
 </head>
 
 <body>
-
-    <div class="brand">Kitson Wedding</div>
-    <div class="address-bar">All Saints Church | Bookham</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default nav-des" role="navigation">
@@ -84,13 +81,13 @@
                     </h2>
                     <hr>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 round">
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
                     <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2495.9981465854817!2d-0.39102239999999994!3d51.27435319999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875de121f53ed7d%3A0x3e0d0c5af59ba7c2!2sAll+Saints+Church!5e0!3m2!1sen!2suk!4v1439845186872"></iframe>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 directions-text">
                     <p>Phone:
-                        <strong>07887 650 174</strong>
+                        <strong>07887 549 123</strong>
                     </p>
                     <p>Email:
                         <strong><a href="mailto:kitsonwedding@gmail.com">kitsonwedding@gmail.com</a></strong>
@@ -106,32 +103,25 @@
 
         <div class="row">
             <div class="box">
-                <div class="col-lg-12">
+                <div class="col-lg-12 white-space contact-background">
                     <hr>
-                    <h2 class="intro-text text-center">Contact
-                        <strong>form</strong>
+                    <h2 class="intro-text text-center">Get in 
+                        <strong>touch</strong>
                     </h2>
                     <hr>
-                    <p>Lost your invitation? Want to wish the couple well? Need to ask a question? Get in touch with Andy and Lauren by filling out the form below.</p>
-                    <p>They would love to hear from you</p>
-                    <form role="form">
+                    <p>Lost your invitation? Want to wish the couple well? Need to ask a question?</p>
+                    <p>Get in touch with Andy and Kelly by filling out the form below. They would love to hear from you</p>
+                    <form action="getintouch.asp" method="post" role="form">
                         <div class="row">
                             <div class="form-group col-lg-4">
-                                <label>Name</label>
-                                <input type="text" class="form-control">
+                                <input type="text" id="t1" name="name" placeholder="name" class="form-control">
                             </div>
                             <div class="form-group col-lg-4">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control">
+                                <input type="email" id="t2" name="email" placeholder="name@domain.com" class="form-control">
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
-                                <label>Message</label>
-                                <textarea class="form-control" rows="6"></textarea>
+                                <textarea id="t3" name="msg" placeholder="message" class="form-control" rows="6"></textarea>
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
@@ -161,6 +151,19 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<!-- Form validity event -->
+	<script>
+	var email = document.getElementById("id");
+
+	email.addEventListener("keyup", function (event) {
+		if(email.validity.typeMismatch) {
+		  email.setCustomValidity("I expect an e-mail, darling!");
+		} else {
+		  email.setCustomValidity("");
+		}
+	});
+	</script>
 
 </body>
 
