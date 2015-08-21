@@ -1,6 +1,6 @@
-/**************************
+/*****************************
 ********* GENERAL *********
-**************************/
+******************************/
 
 body {
     font-family: 'Cabin', sans-serif;
@@ -42,8 +42,29 @@ hr {
 	margin-bottom: 10px;
 }
 
-/**************************
-********* HEADER **********
+.grow {
+	padding: 5px 5px 5px 5px;
+	height: 60px;
+	margin: 5px 1% 5px 1%;
+	position: relative;
+	transition: height 0.5s;
+	-webkit-transition: height 0.5s;
+	text-align: center;
+	overflow: hidden;
+	font-size: 10px;
+}
+
+.grow:hover {
+	height: 145px;
+}
+
+#meet {
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+/*************************
+********* TEXT **********
 **************************/
 
 h1, h2, h3 {
@@ -68,9 +89,13 @@ h1, h2, h3 {
 	text-shadow: none;
 }
 
-/**************************
+.footnote {
+	font-size: 12px;
+}
+
+/******************************
 ******* NAVIGATION ********
-**************************/
+******************************/
 
 .navbar a {
 	font-family: 'Cabin', sans-serif;
@@ -99,9 +124,9 @@ h1, h2, h3 {
 	font-size: 15px;
 }
 
-/**************************
+/****************************
 ********* IMAGES **********
-**************************/
+*****************************/
 
 .logo {
 	margin: 0 auto;
@@ -114,24 +139,32 @@ h1, h2, h3 {
 }
 
 .contact-background {
-	background-color: rgba(251, 208, 208, 0.4)
+	background-color: rgba(251, 208, 208, 0.4); 
 }
 
-placeholder {
+.placeholder {
 	font-size: 15px;
 }
 
 .heart {
-	max-width: 250px;
 	position: absolute;
 	z-index: -1;
 	top: -27px;
 	left: 65px;
 }
 
-/**************************
-********* FOOTER **********
-**************************/
+.heart-motif {
+	max-width: 100px;
+	margin: 0 auto;
+}
+
+iframe {
+	border-radius: 30px;
+}
+
+/***************************************
+********* CONTACT FORM **********
+***************************************/
 
 p > label {
 	display: block;
@@ -162,9 +195,17 @@ input:focus:invalid {
 	outline: none;
 }
 
-/**************************
+.contact {
+	padding: 20px;
+}
+
+#first-line-contact {
+	padding-top: 20px;
+}
+
+/*****************************
 ********* FOOTER **********
-**************************/
+*****************************/
 footer p {
 	font-size: 10px;
 }
